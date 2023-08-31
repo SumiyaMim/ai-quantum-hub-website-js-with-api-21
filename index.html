@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AI Quantum Hub</title>
+</head>
+<body>
+    <header>
+        <h2 class="text-2xl font-bold text-center mt-10 mb-8">AI Quantum Hub</h2>
+    </header>
+    <main class="container mx-auto pb-20 px-7 md:px-20">
+        <!-- sort by date button -->
+        <div class="text-center mb-10">
+            <button onclick="handleSort()" class="bg-[#EB5757] px-4 py-3 text-sm font-semibold text-white rounded-lg hover:bg-[#db5151]">Sort By Date</button>
+        </div>
+
+        <section>
+            <!-- ai all data -->
+            <div id="ai-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            </div>
+
+            <!-- see more button -->
+            <div id="see-more-container" class="text-center mt-14">
+                <button onclick="handleSeeMore()" class="bg-[#EB5757] px-4 py-3 text-sm font-semibold text-white rounded-lg hover:bg-[#db5151]">See More</button>
+            </div>
+        </section>
+
+        <!-- show details modal -->
+        <dialog id="show_details" class="modal">
+        <form method="dialog" class="modal-box max-w-4xl max-h-full p-10 lg:p-20">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            <div id="show-details-container" class="grid md:grid-cols-2 gap-4 w-full">
+            </div>        
+        </form>
+        </dialog>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
